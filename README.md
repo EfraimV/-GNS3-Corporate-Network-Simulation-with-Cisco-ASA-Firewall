@@ -13,3 +13,8 @@ This project simulates a realistic corporate network topology using Cisco router
 VLAN 10 IP: 192.168.100.2
 192.168.10.x |
 Loopback 8.8.8.8 (Fake Internet)
+
+- **ASA Firewall** acts as the border between internal and external networks.
+- **Cisco INTERNET Router** simulates the public Internet via a loopback address (8.8.8.8).
+- **MikroTik Router** handles VLANs and internal routing.
+- **PCs** obtain IP addresses within VLAN 10 and route through ASA to reach the outside world.
