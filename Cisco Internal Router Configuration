@@ -1,0 +1,18 @@
+enable
+configure terminal
+
+# Connect to MikroTik (dot1Q trunk)
+interface FastEthernet1/0
+ description Link to MikroTik
+ encapsulation dot1Q 10
+ ip address 192.168.10.3 255.255.255.0
+ no shutdown
+
+# Connect to ASA inside interface
+interface FastEthernet0/0
+ description Link to ASA
+ ip address 192.168.10.4 255.255.255.0
+ no shutdown
+
+# Default route toward ASA
+ip route 0.0.0.0 0.0.0.0 192.168.10.1
