@@ -1,0 +1,14 @@
+```bash
+# Create VLAN interfaces
+/interface vlan
+add name=vlan10 vlan-id=10 interface=ether1
+add name=vlan20 vlan-id=20 interface=ether1
+
+# Assign IP addresses
+/ip address
+add address=192.168.10.2/24 interface=vlan10
+add address=192.168.20.2/24 interface=vlan20
+
+# Default route toward ASA
+/ip route
+add dst-address=0.0.0.0/0 gateway=192.168.100.1
