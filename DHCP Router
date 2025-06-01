@@ -1,0 +1,13 @@
+interface FastEthernet1/0
+ description LINK TO MIKROTIK
+ ip address 192.168.50.1 255.255.255.252
+ no shutdown
+
+interface FastEthernet0/0
+ ip address 192.168.100.1 255.255.255.0
+ no shutdown
+
+ip dhcp pool WIFI
+ network 192.168.100.0 255.255.255.0
+ default-router 192.168.100.1
+ dns-server 8.8.8.8
