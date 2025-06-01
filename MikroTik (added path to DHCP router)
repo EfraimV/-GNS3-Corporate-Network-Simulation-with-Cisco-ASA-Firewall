@@ -1,0 +1,8 @@
+/interface ethernet
+set ether3 name=to-cisco
+
+/ip address
+add address=192.168.50.2/30 interface=to-cisco
+
+/ip route
+add dst-address=0.0.0.0/0 gateway=192.168.50.1
