@@ -305,6 +305,38 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "4b0d44e7-145b-4951-8263-7479bb687e72",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": 71,
+                            "y": 38
+                        },
+                        "node_id": "815dcaf5-32c8-4b22-83a6-6c8ebc15e1e5",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "e0",
+                            "x": -6,
+                            "y": 20
+                        },
+                        "node_id": "0ddfa9d5-b1d3-468e-960b-982d04956401",
+                        "port_number": 0
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -374,8 +406,8 @@
                 "symbol": ":/symbols/qemu_guest.svg",
                 "template_id": "2f173efd-9f73-4cd6-a1aa-6e90655d4b32",
                 "width": 65,
-                "x": -43,
-                "y": -168,
+                "x": 139,
+                "y": -245,
                 "z": 1
             },
             {
@@ -837,8 +869,37 @@
                 "symbol": ":/symbols/qemu_guest.svg",
                 "template_id": "8d8c151d-102c-43a8-a47c-e1fbcec3b633",
                 "width": 65,
-                "x": -296,
-                "y": -369,
+                "x": -535,
+                "y": -392,
+                "z": 1
+            },
+            {
+                "compute_id": "vm",
+                "console": 5017,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "DMZ-Server",
+                    "x": -10,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "DMZ-Server",
+                "node_id": "815dcaf5-32c8-4b22-83a6-6c8ebc15e1e5",
+                "node_type": "vpcs",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {},
+                "symbol": ":/symbols/vpcs_guest.svg",
+                "template_id": "19021f99-e36f-394d-b4a1-8aaa902ab9cc",
+                "width": 65,
+                "x": -152,
+                "y": -315,
                 "z": 1
             }
         ]
