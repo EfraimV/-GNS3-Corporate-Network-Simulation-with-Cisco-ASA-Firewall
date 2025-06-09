@@ -1,0 +1,25 @@
+# Enable interface and assign IP
+interface gigabitEthernet0/3
+ nameif DMZ
+ security-level 50
+ ip address 192.168.50.1 255.255.255.0
+ no shutdown
+
+# NAT rule for DMZ to outside
+object network obj_DMZ
+ subnet 192.168.50.0 255.255.255.0
+ nat (DMZ,OUTSIDE) dynamic interface
+
+# ACL to allow traffic from DMZ to outside
+access-list dmz_access extended permit ip any any
+access-group dmz_access in interface DMZ
+
+# Static route for DMZ (only if needed)
+# route DMZ 0.0.0.0 0.0.0.0 <DMZ gateway>
+
+# Show interface status
+show interface ip brief
+
+# Basic VPCS setup (IP config inside GNS3 VPCS console)
+ip 192.168.50.100 255.255.255.0 192.168.50.1
+ping 8.8.8.8
