@@ -1,0 +1,34 @@
+### Cisco R1 OSPF Configuration
+
+configure terminal
+! Enable OSPF process 1
+router ospf 1
+ network 192.168.1.0 0.0.0.255 area 0
+ network 192.168.10.0 0.0.0.255 area 0
+ network 192.168.20.0 0.0.0.255 area 0
+ router-id 1.1.1.1
+exit
+write memory
+
+! Optional verification commands
+show ip ospf interface brief
+show ip ospf neighbor
+show ip route ospf
+
+
+### Mikrotik Router OSPF Configuration
+
+/ip address
+add address=192.168.12.2/30 interface=ether1
+add address=10.2.2.2/24 interface=ether2
+
+/routing ospf instance
+set [ find default=yes ] router-id=2.2.2.2
+
+/routing ospf interface
+add interface=ether1 network-type=broadcast
+add interface=ether2 network-type=broadcast
+
+/routing ospf network
+add network=192.168.12.0/30 area=backbone
+add network=10.2.2.0/24 area=backbone
