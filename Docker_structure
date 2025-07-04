@@ -1,0 +1,32 @@
+# 🔧 GNS3 Docker Ping Monitor
+
+This Docker container contains a minimal Python script to ping a list of IPs inside a GNS3 lab environment.
+
+## 🐳 Docker Image
+
+Based on: `python:3.10-slim`
+
+Contains:
+- Custom `ping_sweep.py` script
+- IP list defined inside container (or mount your own)
+
+## 📜 Script: `ping_sweep.py`
+
+```python
+import os
+import subprocess
+
+ip_list = [
+    "192.168.10.1",
+    "192.168.10.2",
+    "10.2.2.1",
+    "192.168.50.1"
+]
+
+for ip in ip_list:
+    print(f"Pinging {ip}...", end=' ')
+    result = subprocess.run(["ping", "-c", "2", ip], stdout=subprocess.DEVNULL)
+    if result.returncode == 0:
+        print("✅ Reachable")
+    else:
+        print("❌ Unreachable")
