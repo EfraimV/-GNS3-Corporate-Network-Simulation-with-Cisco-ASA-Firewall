@@ -337,6 +337,38 @@
                     }
                 ],
                 "suspend": false
+            },
+            {
+                "filters": {},
+                "link_id": "625892d8-e11c-4eaf-a310-405868563f7b",
+                "link_style": {},
+                "nodes": [
+                    {
+                        "adapter_number": 0,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "eth0",
+                            "x": 49,
+                            "y": 65
+                        },
+                        "node_id": "d3db0c06-a7ae-4422-9a08-bb26bb5722b4",
+                        "port_number": 0
+                    },
+                    {
+                        "adapter_number": 2,
+                        "label": {
+                            "rotation": 0,
+                            "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                            "text": "f2/1",
+                            "x": 15,
+                            "y": -14
+                        },
+                        "node_id": "7cf12430-cfe2-48e9-9d1d-b6a2880d4d83",
+                        "port_number": 1
+                    }
+                ],
+                "suspend": false
             }
         ],
         "nodes": [
@@ -900,6 +932,49 @@
                 "width": 65,
                 "x": -152,
                 "y": -315,
+                "z": 1
+            },
+            {
+                "compute_id": "vm",
+                "console": 5019,
+                "console_auto_start": false,
+                "console_type": "telnet",
+                "custom_adapters": [],
+                "first_port_name": null,
+                "height": 59,
+                "label": {
+                    "rotation": 0,
+                    "style": "font-family: TypeWriter;font-size: 10.0;font-weight: bold;fill: #000000;fill-opacity: 1.0;",
+                    "text": "gns3-ping-monitor-1",
+                    "x": -38,
+                    "y": -25
+                },
+                "locked": false,
+                "name": "gns3-ping-monitor-1",
+                "node_id": "d3db0c06-a7ae-4422-9a08-bb26bb5722b4",
+                "node_type": "docker",
+                "port_name_format": "Ethernet{0}",
+                "port_segment_size": 0,
+                "properties": {
+                    "adapters": 6,
+                    "aux": 5020,
+                    "console_http_path": "/",
+                    "console_http_port": 80,
+                    "console_resolution": "1024x768",
+                    "container_id": "9dd0e2fbd9df18ca9d812b8f32cc394226ddf7c5142c538452ab83233b218508",
+                    "environment": null,
+                    "extra_hosts": null,
+                    "extra_volumes": [],
+                    "image": "gns3-ping-monitor:latest",
+                    "mac_address": "02:42:db:0c:06:00",
+                    "start_command": "/bin/bash",
+                    "usage": ""
+                },
+                "symbol": ":/symbols/docker_guest.svg",
+                "template_id": "709ed91c-173e-4384-95d7-671874d271f1",
+                "width": 65,
+                "x": -178,
+                "y": -127,
                 "z": 1
             }
         ]
